@@ -22,6 +22,23 @@ the kind of work the Replikanti repos actually see. The results calibrate the
   worktree. Tasks come from our own repos; review any new task's prompt before
   adding it.
 
+## What transfers and what doesn't
+
+The **harness transfers**: the runner knows nothing about any language or
+framework — it creates a worktree, runs a headless `claude -p` attempt, runs
+the task's `verify.sh`, records the exit code and cost. All stack-specific
+knowledge lives in the tasks you write (`task.json` points at YOUR repo,
+`verify.sh` calls YOUR test runner and linters).
+
+The **results do not transfer**: the tier table in `runs/results.jsonl` is
+calibrated to this corpus (framework-free Rust, an agent DSL, POSIX shell).
+A different codebase will place the capability boundaries elsewhere. Don't
+adopt our numbers — run your own corpus; that is the point of the tool.
+
+The default ladder assumes Claude Code as the agent runtime (`claude -p`,
+`--model`, `effortLevel`). Using a different agent CLI means swapping the one
+invocation block in `run-bench.sh` and redefining the ladder tiers.
+
 ## Usage
 
 ```bash
