@@ -1,0 +1,9 @@
+{
+  "id": "col-slots-dir-pin",
+  "repo": "agentis-colonies",
+  "repo_path": "~/git/Replikanti/agentis-colonies",
+  "base_ref": "9d9a688c864d7c6d98ad489a9296a2ce9913079d",
+  "class": "shell-small",
+  "timeout_s": 600,
+  "source": "re-implementation of merged PR #1418 (#1352 follow-up) at its parent commit"
+}

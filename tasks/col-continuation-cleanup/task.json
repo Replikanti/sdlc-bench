@@ -1,0 +1,9 @@
+{
+  "id": "col-continuation-cleanup",
+  "repo": "agentis-colonies",
+  "repo_path": "~/git/Replikanti/agentis-colonies",
+  "base_ref": "2f62911acf9341b0b5468f181dc348ad5cf11090",
+  "class": "ag-small",
+  "timeout_s": 600,
+  "source": "re-implementation of merged PR #1425 (issue #1424) at its parent commit"
+}

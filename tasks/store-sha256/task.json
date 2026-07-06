@@ -1,0 +1,9 @@
+{
+  "id": "store-sha256",
+  "repo": "agentis (storefront)",
+  "repo_path": "~/git/Replikanti/agentis",
+  "base_ref": "002c6dbfb4649427db878b74813e6a49e1260eea",
+  "class": "shell-small",
+  "timeout_s": 600,
+  "source": "real known gap documented in CLAUDE.md"
+}

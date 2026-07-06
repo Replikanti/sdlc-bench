@@ -1,0 +1,9 @@
+{
+  "id": "fc-cmd-file",
+  "repo": "flat-cyborg",
+  "repo_path": "~/git/Replikanti/flat-cyborg",
+  "base_ref": "f272c35838c580a337fcd71e7f7bfabedb707c2d",
+  "class": "rust-small",
+  "timeout_s": 1500,
+  "source": "re-implementation of merged PR #57 at its parent commit"
+}
