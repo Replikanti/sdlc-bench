@@ -1,0 +1,9 @@
+{
+  "id": "intake-route",
+  "repo": "envelope (multi-repo routing)",
+  "repo_path": "~/git/Replikanti/sdlc-bench",
+  "base_ref": "main",
+  "class": "issue-intake",
+  "timeout_s": 420,
+  "source": "real routing ground truth: the raw ask behind flat-cyborg #57 (--cmd-file), deliberately phrased federation-flavored"
+}

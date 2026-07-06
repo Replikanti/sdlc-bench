@@ -1,0 +1,9 @@
+{
+  "id": "intake-dedup",
+  "repo": "envelope (multi-repo routing)",
+  "repo_path": "~/git/Replikanti/sdlc-bench",
+  "base_ref": "main",
+  "class": "issue-intake",
+  "timeout_s": 420,
+  "source": "dedup detection against a planted near-duplicate in a fixture issue list"
+}
