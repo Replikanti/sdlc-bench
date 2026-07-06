@@ -1,0 +1,9 @@
+{
+  "id": "release-prep",
+  "repo": "flat-cyborg",
+  "repo_path": "~/git/Replikanti/flat-cyborg",
+  "base_ref": "main",
+  "class": "release-prep",
+  "timeout_s": 600,
+  "source": "v2: real-history release prep \u2014 inspect git log since v0.11.0 (docs-only merges), ground truth patch 0.11.1. v1 was invalid: it described fictional changes and punished models for refusing to fabricate the changelog."
+}

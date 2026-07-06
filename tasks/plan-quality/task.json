@@ -1,0 +1,1 @@
+{"id":"plan-quality","repo":"flat-cyborg","repo_path":"~/git/Replikanti/flat-cyborg","base_ref":"811755551307aa47d0b626a0a8396ac6f045d598","class":"planning","timeout_s":600,"source":"plan the real #52 feature at its parent commit; ground truth implementation sites = src/wrapper.rs + src/main.rs"}

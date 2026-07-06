@@ -1,0 +1,1 @@
+{"id":"review-defects","repo":"flat-cyborg","repo_path":"~/git/Replikanti/flat-cyborg","base_ref":"main","class":"adversarial-review","timeout_s":600,"source":"two planted semantic bugs in an uncommitted 'refactor' diff (inverted delay range, ends_with->starts_with)"}

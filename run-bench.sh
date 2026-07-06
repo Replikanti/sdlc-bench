@@ -53,6 +53,9 @@ for task in "${TASKS[@]}"; do
     mkdir -p "$(dirname "$WT")"
     echo "--- tier $MODEL/$EFFORT -> $WT"
     git -C "$REPO_PATH" worktree add --detach "$WT" "$BASE_REF" >/dev/null 2>&1
+    # optional per-task setup hook: plants fixtures/defects into the worktree
+    # BEFORE the attempt (ground truth for audit/review task classes)
+    [[ -f "$TDIR/setup.sh" ]] && ( cd "$WT" && bash "$TDIR/setup.sh" > .bench-setup.log 2>&1 )
 
     OUTJSON="$WT/.bench-claude-output.json"
     set +e
@@ -88,6 +91,11 @@ row = {
 print(json.dumps(row))
 PYEOF
     echo "    pass=$PASS (claude_rc=$CLAUDE_RC verify_rc=$VERIFY_RC)"
+    # persist attempt evidence before the worktree disappears
+    LOGDIR="$RUNS_DIR/$task/logs" && mkdir -p "$LOGDIR"
+    cp "$WT/.bench-verify.log" "$LOGDIR/$MODEL-$EFFORT-$STAMP.verify.log" 2>/dev/null || true
+    cp "$WT/.bench-claude-stderr.log" "$LOGDIR/$MODEL-$EFFORT-$STAMP.stderr.log" 2>/dev/null || true
+    cp "$OUTJSON" "$LOGDIR/$MODEL-$EFFORT-$STAMP.output.json" 2>/dev/null || true
     git -C "$REPO_PATH" worktree remove --force "$WT" >/dev/null 2>&1 || true
 
     if [[ "$PASS" == "true" && "$FULL_GRID" -eq 0 ]]; then
